@@ -1,0 +1,4 @@
+app/code/community/StuntCoders/AjaxCart                         app/code/community/StuntCoders/AjaxCart
+app/design/frontend/base/default/layout/stuntcoders/*           app/design/frontend/base/default/template/layout/
+app/design/frontend/base/default/template/stuntcoders/*         app/design/frontend/base/default/template/stuntcoders/
+app/etc/modules/*                                               app/etc/modules/
