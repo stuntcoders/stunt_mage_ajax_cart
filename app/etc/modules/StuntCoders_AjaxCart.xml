@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <StuntCoders_AjaxCart>
+            <active>true</active>
+            <codePool>community</codePool>
+        </StuntCoders_AjaxCart>
+    </modules>
+</config>

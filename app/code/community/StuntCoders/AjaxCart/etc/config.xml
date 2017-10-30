@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <StuntCoders_AjaxCart>
+            <version>0.1.0</version>
+        </StuntCoders_AjaxCart>
+    </modules>
+    <global>
+        <blocks>
+            <stuntcoders_ajaxcart>
+                <class>StuntCoders_AjaxCart_Block</class>
+            </stuntcoders_ajaxcart>
+        </blocks>
+        <helpers>
+            <stuntcoders_ajaxcart>
+                <class>StuntCoders_AjaxCart_Helper</class>
+            </stuntcoders_ajaxcart>
+        </helpers>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <ajax_cart>
+                    <file>stuntcoders/ajaxcart.xml</file>
+                </ajax_cart>
+            </updates>
+        </layout>
+        <routers>
+            <checkout>
+                <args>
+                    <modules>
+                        <StuntCoders_AjaxCart before="Mage_Checkout">StuntCoders_AjaxCart</StuntCoders_AjaxCart>
+                    </modules>
+                </args>
+            </checkout>
+        </routers>
+    </frontend>
+    <default>
+        <checkout>
+            <cart>
+                <ajax_cart>1</ajax_cart>
+            </cart>
+        </checkout>
+    </default>
+</config>

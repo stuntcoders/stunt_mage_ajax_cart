@@ -1,0 +1,21 @@
+<script>
+    if (typeof productAddToCartForm !== 'undefined') {
+        productAddToCartForm.form.submit = function () {
+            var form = this;
+
+            document.dispatchEvent(new CustomEvent('sc_ajax_cart_add_before', {
+                detail: { form: form }
+            }));
+
+            new Ajax.Request('<?php echo $this->getUrl('checkout/cart/ajaxAdd'); ?>', {
+                method: 'post',
+                parameters: this.serialize(true),
+                onComplete: function (response) {
+                    document.dispatchEvent(new CustomEvent('sc_ajax_cart_add_after', {
+                        detail: { form: form, response: response }
+                    }));
+                }
+            });
+        };
+    }
+</script>
